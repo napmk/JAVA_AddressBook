@@ -31,8 +31,8 @@ public class WinMain extends JDialog {
 	 * Create the dialog.
 	 */
 	public WinMain() {
-		setTitle("ICI \uC8FC\uC18C\uB85D");
-		setBounds(100, 100, 419, 424);
+		setTitle("ICI 동창회");
+		setBounds(100, 100, 283, 222);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -41,35 +41,32 @@ public class WinMain extends JDialog {
 			JButton btnInsertMember = new JButton("");
 			btnInsertMember.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					WinInsertMember winInsertMember = new WinInsertMember();
+					WinInsertMember winInsertMember = 
+							new WinInsertMember();
 					winInsertMember.setModal(true);
 					winInsertMember.setVisible(true);
 				}
 			});
-			btnInsertMember.setToolTipText("회원가입");
-			btnInsertMember.setIcon(new ImageIcon("C:\\javawork\\AddressBook\\imgaes\\addUser.png"));
+			btnInsertMember.setToolTipText("회원 가입");
+			btnInsertMember.setIcon(new ImageIcon("images/addUser.png"));
 			contentPanel.add(btnInsertMember);
 		}
 		{
 			JButton btnUpdateMember = new JButton("");
-			btnUpdateMember.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			btnUpdateMember.setToolTipText("\uC5C5\uB370\uC774\uD2B8");
-			btnUpdateMember.setIcon(new ImageIcon("C:\\javawork\\AddressBook\\imgaes\\showUser.png"));
+			btnUpdateMember.setToolTipText("회원정보 변경");
+			btnUpdateMember.setIcon(new ImageIcon("images/update.png"));
 			contentPanel.add(btnUpdateMember);
 		}
 		{
 			JButton btnDeleteMember = new JButton("");
-			btnDeleteMember.setToolTipText("\uD68C\uC6D0\uC0AD\uC81C");
-			btnDeleteMember.setIcon(new ImageIcon("C:\\javawork\\AddressBook\\imgaes\\delUser.png"));
+			btnDeleteMember.setToolTipText("회원 탈퇴");
+			btnDeleteMember.setIcon(new ImageIcon("images/delete.png"));
 			contentPanel.add(btnDeleteMember);
 		}
 		{
 			JButton btnSearchMember = new JButton("");
-			btnSearchMember.setToolTipText("\uAC80\uC0C9\uD558\uAE30");
-			btnSearchMember.setIcon(new ImageIcon("C:\\javawork\\AddressBook\\imgaes\\search.png"));
+			btnSearchMember.setToolTipText("회원 검색");
+			btnSearchMember.setIcon(new ImageIcon("images/search.png"));
 			contentPanel.add(btnSearchMember);
 		}
 	}
