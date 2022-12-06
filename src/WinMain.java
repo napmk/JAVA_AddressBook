@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 public class WinMain extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
+	private final JButton btnNewButton = new JButton("");
 
 	/**
 	 * Launch the application.
@@ -32,7 +33,7 @@ public class WinMain extends JDialog {
 	 */
 	public WinMain() {
 		setTitle("ICI 동창회");
-		setBounds(100, 100, 283, 222);
+		setBounds(100, 100, 283, 321);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -56,7 +57,7 @@ public class WinMain extends JDialog {
 			btnUpdateMember.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					WinSearch winSearch = new WinSearch();
-					winSearch.setModal(true); 
+					winSearch.setModal(true);
 					winSearch.setVisible(true);
 				}
 			});
@@ -85,12 +86,30 @@ public class WinMain extends JDialog {
 							new WinSearchAll();
 					winSearchAll.setModal(true);
 					winSearchAll.setVisible(true);
-					
 				}
 			});
 			btnSearchMember.setToolTipText("회원 검색");
 			btnSearchMember.setIcon(new ImageIcon("images/search.png"));
 			contentPanel.add(btnSearchMember);
+		}
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon("images/money.png"));
+		contentPanel.add(btnNewButton);
+		{
+			JButton btnNewButton_1 = new JButton("");
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					WinShowMoneyAll winShowMoneyAll = 
+							new WinShowMoneyAll();
+					winShowMoneyAll.setModal(true);
+					winShowMoneyAll.setVisible(true);
+				}
+			});
+			btnNewButton_1.setIcon(new ImageIcon("images/saving.png"));
+			contentPanel.add(btnNewButton_1);
 		}
 	}
 
