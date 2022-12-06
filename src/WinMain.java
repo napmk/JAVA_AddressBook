@@ -53,18 +53,41 @@ public class WinMain extends JDialog {
 		}
 		{
 			JButton btnUpdateMember = new JButton("");
+			btnUpdateMember.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					WinSearch winSearch = new WinSearch();
+					winSearch.setModal(true); 
+					winSearch.setVisible(true);
+				}
+			});
 			btnUpdateMember.setToolTipText("회원정보 변경");
 			btnUpdateMember.setIcon(new ImageIcon("images/update.png"));
 			contentPanel.add(btnUpdateMember);
 		}
 		{
 			JButton btnDeleteMember = new JButton("");
+			btnDeleteMember.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					WinSearch winSearch = new WinSearch();
+					winSearch.setModal(true);
+					winSearch.setVisible(true);
+				}
+			});
 			btnDeleteMember.setToolTipText("회원 탈퇴");
 			btnDeleteMember.setIcon(new ImageIcon("images/delete.png"));
 			contentPanel.add(btnDeleteMember);
 		}
 		{
 			JButton btnSearchMember = new JButton("");
+			btnSearchMember.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					WinSearchAll winSearchAll = 
+							new WinSearchAll();
+					winSearchAll.setModal(true);
+					winSearchAll.setVisible(true);
+					
+				}
+			});
 			btnSearchMember.setToolTipText("회원 검색");
 			btnSearchMember.setIcon(new ImageIcon("images/search.png"));
 			contentPanel.add(btnSearchMember);
